@@ -1,6 +1,6 @@
 function timer() {
     setInterval(() => {
-        document.getElementById('timer').innerHTML = +new Date().UTC()
+        document.getElementById('timer').innerHTML = +new Date()
     }, 1)
 
     setInterval(() => {
