@@ -1,0 +1,33 @@
+<html>
+
+<head>
+    <title>The Time</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css"
+        integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
+        crossorigin="anonymous" />
+    <link rel="stylesheet" href="/time.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
+        integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
+        crossorigin="anonymous"></script>
+    <script type="application/javascript" src="/time.js"></script>
+</head>
+
+<body onload="timer()">
+    <!-- .container is main centered wrapper -->
+    <div class="container">
+
+        <!-- columns should be the immediate child of a .row -->
+        <div class="row">
+            <div class="twelve column">
+                <h1>The time is</h1>
+            </div>
+        </div>
+        <div class="row">
+            <div class="twelve column">
+                <div id="timer"></div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>>
