@@ -3,13 +3,13 @@ var timezone = moment.tz.guess()
 const timeMs = () => {
     document.getElementById('timer').innerHTML = moment().tz(timezone).format('HH:mm:ss.SSS')
     document.getElementById('timer2').innerHTML = moment().tz(timezone).format('x')
+    document.getElementById('date').innerHTML = moment().tz(timezone).format('MMMM Do YYYY')
 }
 
 const loadTimer = async () => {
 
-        timeMs(timezone)
+    timeMs(timezone)
 
-    document.getElementById('date').innerHTML = moment().tz(timezone).format('MMMM Do YYYY');
     setInterval(timeMs, 1)
     const timezoneSelector = document.getElementById('timezone')
 
