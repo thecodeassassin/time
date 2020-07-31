@@ -5,7 +5,7 @@
 
     <meta charset="utf-8">
     <title>THE TIME LOL</title>
-    <meta name="description" content="The current time, no ads, no analytics">
+    <meta name="description" content="The current time, no ads, no analytics. Also shows you the current time in milliseconds.">
     <meta name="author" content="Stephen Hoogendijk">
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -16,43 +16,53 @@
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="time.css" />
     <link rel="stylesheet" href="normalise.css" />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.27.0/moment.min.js"
-        integrity="sha512-rmZcZsyhe0/MAjquhTgiUcb4d9knaFc7b5xAfju483gbEXTkeJRUMIPk6s3ySZMYUHEcjKbjLjyddGWMrNEvZg=="
-        crossorigin="anonymous"></script>
+    <script src="js/moment.js"></script>
+    <script src="js/moment-tz.js"></script>
     <script type="application/javascript" src="time.js"></script>
-    <script src="https://cdn.jsdelivr.net/gh/lepture/github-cards@latest/jsdelivr/widget.js"></script>
+    <script type="application/javascript" src="check.js"></script>
 
     <link rel="icon" type="image/png" href="favicon.ico">
 
 </head>
 
-<body onload="timer()">
+<body>
     <div class="container">
         <div class="row">
-            <div class="twelve column" style="margin-top: 1%;">
-                <div class="title">
-                    <h1>The time is:</h1>
-
+            <div class="twelve column">
+                <div class="title center" id="title">
+                    <h1>The time is</h1>
                 </div>
             </div>
         </div>
         <div class="row">
-            <div class="six column">
-                <div id="timer2" class="time"></div>
+            <div class="six column center">
                 <div id="timer" class="time"></div>
+                <div id="timer2" class="time small"></div>
+                <div id="timer3" class="time small"></div>
+                <h2>-On-</h2>
                 <div id="date" class="time"></div>
             </div>
         </div>
         <div class="row">
-            <div id="footer" class="twelve column">
-                <h1>Me</h1>
-                <span><a href="https://github.com/thecodeassassin" target="_blank">thecodeassassin</a></span>
+            <div id="footer" class="twelve column center">
+                <h1>About</h1>
+                <span><a href="https://github.com/thecodeassassin" target="_blank">thecodeassassin</a></span><br />
+                <span></span><a href="javascript:void(0);" onclick="alert('What?! Unicorns?!'); unicorns();" id="expecations">I was expecating something else</a></span> <br />
+                <span><a href="https://github.com/thecodeassassin/time" target="_blank">The sauce</a></span><br />
             </div>
         </div>
-    </div> <!-- end primary div.container -->
+        <div class="row">
+            <div id="controls" class="twelve column center">
+                <form>
+                    <label for="tz">Timezone: </label>
+                    <select id="timezone"></select>
+                </form>
+            </div>
+        </div>
+    </div>
 
 
-
+    <canvas id="unicorns" width="100%" height="100%"></canvas>
 </body>
 
 </html>
