@@ -14,8 +14,8 @@
         integrity="sha512-EZLkOqwILORob+p0BXZc+Vm3RgJBOe1Iq/0fiI7r/wJgzOFZMlsqTa29UEl6v6U6gsV4uIpsNZoV32YZqrCRCQ=="
         crossorigin="anonymous" />
     <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="time.css" />
     <link rel="stylesheet" href="normalise.css" />
+    <link rel="stylesheet" href="time.css" />
     <script src="js/moment.js"></script>
     <script src="js/moment-tz.js"></script>
     <script type="application/javascript" src="time.js"></script>
@@ -38,24 +38,26 @@
             <div class="six column center">
                 <div id="timer" class="time"></div>
                 <div id="timer2" class="time small"></div>
-                <div id="timer3" class="time small"></div>
                 <h2>-On-</h2>
-                <div id="date" class="time"></div>
+                <div id="date" class="time small"></div>
             </div>
         </div>
         <div class="row">
             <div id="footer" class="twelve column center">
-                <h1>About</h1>
-                <span><a href="https://github.com/thecodeassassin" target="_blank">thecodeassassin</a></span><br />
-                <span></span><a href="javascript:void(0);" onclick="alert('What?! Unicorns?!'); unicorns();" id="expecations">I was expecating something else</a></span> <br />
-                <span><a href="https://github.com/thecodeassassin/time" target="_blank">The sauce</a></span><br />
+                <h2>About</h2>
+                <p><a href="https://github.com/thecodeassassin" target="_blank">thecodeassassin</a><br />
+                <a href="javascript:void(0);" onclick="alert('What?! Unicorns?!'); unicorns();" id="expecations">I was expecating something else</a><br />
+                <a href="https://github.com/thecodeassassin/time" target="_blank">The sauce</a><br />
+                </p>
             </div>
         </div>
         <div class="row">
             <div id="controls" class="twelve column center">
                 <form>
-                    <label for="tz">Timezone: </label>
-                    <select id="timezone"></select>
+                    <p>
+                        <label for="tz">Timezone: </label>
+                        <select id="timezone"></select>
+                    </p>
                 </form>
             </div>
         </div>

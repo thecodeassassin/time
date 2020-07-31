@@ -1,22 +1,16 @@
 var timezone = moment.tz.guess()
 
 const timeMs = () => {
+    document.getElementById('timer').innerHTML = moment().tz(timezone).format('HH:mm:ss.SSS')
     document.getElementById('timer2').innerHTML = moment().tz(timezone).format('x')
-    document.getElementById('timer3').innerHTML = moment().tz(timezone).format('HH:mm:ss.SSS')
-}
-
-const timeS = () => {
-    return document.getElementById('timer').innerHTML = moment().tz(timezone).format('HH:mm:ss')
 }
 
 const loadTimer = async () => {
 
-    timeS(timezone)
-    timeMs(timezone)
+        timeMs(timezone)
 
     document.getElementById('date').innerHTML = moment().tz(timezone).format('MMMM Do YYYY');
     setInterval(timeMs, 1)
-    setInterval(timeS, 100)
     const timezoneSelector = document.getElementById('timezone')
 
     try {
@@ -63,6 +57,7 @@ const loadTimer = async () => {
 function unicorns() {
 
     const canvas = document.getElementById('unicorns')
+    const link = document.getElementById('expecations').remove()
 
     canvas.width = document.body.clientWidth;
     canvas.height = document.body.clientHeight;
@@ -72,8 +67,8 @@ function unicorns() {
     const unicorn = new Image()
     unicorn.src = '6427925.png'
     unicorn.onload= () => requestAnimationFrame(animate)
-    unicorn.width = 200
-    unicorn.height = 200
+    unicorn.width = 100
+    unicorn.height = 100
 
     const shadow = new Image, shading = new Image
     const ctx = canvas.getContext('2d')
@@ -92,7 +87,7 @@ function unicorns() {
         ctx.translate(x,y);
         ctx.drawImage( shadow, -bw+10, -bh+10 );
         ctx.rotate(a);
-        ctx.drawImage( unicorn, -bw, -bh, 200, 200 * unicorn.height / unicorn.width );
+        ctx.drawImage( unicorn, -bw, -bh, 120, 100);
         ctx.rotate(-a);
         ctx.drawImage( shading, -bw, -bh );
         ctx.translate(-x,-y);
