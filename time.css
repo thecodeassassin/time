@@ -1,7 +1,19 @@
 body {
     font-family: 'Mulish', sans-serif;
+    background-color: darkslategray;
+    color: #FFF;
 }
 
 .time {
-    font-size: 8em;
+    font-size: 6em;
+    text-align: center;
+}
+
+div.title {
+    font-size: 2em;
+    text-align: center;
+}
+
+#footer {
+    text-align: center;
 }
